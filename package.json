@@ -1,0 +1,22 @@
+{
+    "name"       : "tir",
+    "version"    : "0.0.1",
+    "description": "Logger",
+    "keywords"   : ["log", "logger", "notifier", "winston"],
+    "author"     : "Alexander Abashkin <monolithed@gmail.com>",
+    "licence"    : "MIT",
+    "private"    : true,
+
+    "repository": {
+        "type": "git",
+        "url" : "git@gitlab.corp.mail.ru:mail/logger.git"
+    },
+
+    "engines": {
+        "node": ">=4.x"
+    },
+
+    "dependencies": {
+        "winston": "^2.2.0"
+    }
+}

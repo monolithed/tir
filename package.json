@@ -5,7 +5,6 @@
     "keywords"   : ["log", "logger", "notifier", "winston"],
     "author"     : "Alexander Abashkin <monolithed@gmail.com>",
     "licence"    : "MIT",
-    "private"    : true,
 
     "repository": {
         "type": "git",

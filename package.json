@@ -1,6 +1,6 @@
 {
     "name": "tir",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Logger",
     "keywords": [ "log", "logger", "notifier", "winston" ],
 

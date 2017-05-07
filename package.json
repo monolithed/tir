@@ -14,7 +14,7 @@
 
     "scripts": {
         "test": "tsc && mocha tests",
-        "prepublishOnly": "test"
+        "prepublishOnly": "npm test"
     },
 
     "engines": {

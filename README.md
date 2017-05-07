@@ -1,6 +1,6 @@
 # Tir
 
-> A simple logger
+> It's just a wrapper with colorization around [Winston](https://www.npmjs.com/package/winston).
 
 
 ### Installation
@@ -15,16 +15,34 @@ npm install tir
 Tir.<info | warn | error | log>
 ```
 
-All methods provide the same string interpolation like [util.format](http://nodejs.org/api/util.html#util_util_format_format).
+![Example](./files/preview.png)
 
-![Example](https://habrastorage.org/files/3ba/eed/93a/3baeed93a1d64c44a2b1b36fee1d13cb.png)
+
+### Usage
+
+```ts
+import { Log } from 'tir';
+
+Log.info('message %j', { x: 1 });
+```
+
+The first argument is a string containing zero or more placeholder tokens. Each placeholder token is replaced with the converted value from the corresponding argument.<br />
+<br />
+Supported placeholders are:<br />
+
+* **%s** - String.
+* **%d** - Number (integer or floating point value).
+* **%i** - Integer.
+* **%f** - Floating point value.
+* **%j** - JSON. Replaced with the string '[Circular]' if the argument contains circular references.
+* **%%** - single percent sign ('%'). This does not consume an argument.
 
 #### .info
 
 *Information message*
 
 ```js
-Tir.info('Information %s', 'message');
+Log.info('Information %s', 'message');
 ```
 
 #### .warn
@@ -32,7 +50,7 @@ Tir.info('Information %s', 'message');
 *Warning message*
 
 ```js
-Tir.warn('Warning %s', 'message');
+Log.warn('Warning %s', 'message');
 ```
 
 #### .error
@@ -40,13 +58,7 @@ Tir.warn('Warning %s', 'message');
 *Error message*
 
 ```js
-Tir.error('Error %s', 'message');
-```
-
-* **fatal** — Fatal error with exit code 4 (EINTR)
-
-```js
-Tir.error('fatal', 'Error %s', 'message');
+Log.error('Error %s', 'message');
 ```
 
 #### .log
@@ -54,6 +66,8 @@ Tir.error('fatal', 'Error %s', 'message');
 *Universal method*
 
 ```js
+import { Log as Tir } from 'tir';
+
 Tir.log('info', 'Information %s', 'message');
 ```
 

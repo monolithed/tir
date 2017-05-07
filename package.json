@@ -1,14 +1,19 @@
 {
-    "name"       : "tir",
-    "version"    : "0.0.2",
+    "name": "tir",
+    "version": "1.0.0",
     "description": "Logger",
-    "keywords"   : ["log", "logger", "notifier", "winston"],
-    "author"     : "Alexander Abashkin <monolithed@gmail.com>",
-    "licence"    : "MIT",
+    "keywords": [ "log", "logger", "notifier", "winston" ],
+
+    "author": "Alexander Abashkin <monolithed@gmail.com>",
+    "licence": "MIT",
 
     "repository": {
         "type": "git",
-        "url" : "git@github.com:monolithed/tir.git"
+        "url": "git@github.com:monolithed/tir.git"
+    },
+
+    "scripts": {
+        "test": "tsc && mocha tests"
     },
 
     "engines": {
@@ -16,6 +21,15 @@
     },
 
     "dependencies": {
-        "winston": "^2.2.0"
+        "@types/winston": "^2.3.2",
+        "winston": "^2.3.1"
+    },
+
+    "devDependencies": {
+        "@types/mocha": "^2.2.41",
+        "@types/colors": "^1.1.3",
+        "typescript": "^2.3.2",
+        "colors": "^1.1.2",
+        "mocha": "^3.3.0"
     }
 }
